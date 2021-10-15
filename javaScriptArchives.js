@@ -29,3 +29,15 @@ function buildPalindrome(str) {
     newArr = str.split("");
   }
 }
+
+//NOTE: Find the stray number
+// [1, 1, 2] ==> 2
+// [17, 17, 3, 17, 17, 17, 17] ==> 3
+
+function stray(numbers) {
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[0] != numbers[i + 1]) {
+      return numbers[i + 1];
+    }
+  }
+}
