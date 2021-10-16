@@ -13,6 +13,18 @@ function palindromeChecker(str) {
   return true;
 }
 
+//NOTE: solution 2 : will return true if the str is a palindrome, return false if not
+//sample output: racecar -> true
+function palindromeChecker(myString) {
+  const length = myString.length;
+  const firstElem = myString[i];
+  const secondElem = myString[length - i - 1];
+  for (let i = 0; i < length - 1; i++) {
+    if (firstElem != secondElem) return false;
+  }
+  return true;
+}
+
 //NOTE: will build a palindrome based on a given string
 //sample output: abcdc -> abcdcba
 function buildPalindrome(str) {
@@ -27,17 +39,5 @@ function buildPalindrome(str) {
       return newArr.join("");
     }
     newArr = str.split("");
-  }
-}
-
-//NOTE: Find the stray number
-// [1, 1, 2] ==> 2
-// [17, 17, 3, 17, 17, 17, 17] ==> 3
-
-function stray(numbers) {
-  for (let i = 0; i < numbers.length; i++) {
-    if (numbers[0] != numbers[i + 1]) {
-      return numbers[i + 1];
-    }
   }
 }
