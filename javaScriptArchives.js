@@ -17,10 +17,10 @@ function palindromeChecker(str) {
 //sample output: racecar -> true
 function palindromeChecker(myString) {
   const length = myString.length;
-  const firstElem = myString[i];
-  const secondElem = myString[length - i - 1];
+  const firsLetter = myString[i];
+  const secondLetter = myString[length - i - 1];
   for (let i = 0; i < length - 1; i++) {
-    if (firstElem != secondElem) return false;
+    if (firsLetter != secondLetter) return false;
   }
   return true;
 }
