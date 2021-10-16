@@ -42,3 +42,16 @@ function buildPalindrome(str) {
     newArr = str.split("");
   }
 }
+
+//NOTE: Find the first non-consecutive number
+//sample output: [1,2,3,5] -> 5
+function firstNonConsecutive(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    const curr = arr[i];
+    const next = arr[i + 1];
+    if (curr + 1 !== next) {
+      return next;
+    }
+  }
+  return null;
+}
