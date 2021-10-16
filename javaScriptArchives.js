@@ -18,9 +18,11 @@ function palindromeChecker(str) {
 function palindromeChecker(myString) {
   const length = myString.length;
   let i = 0;
-  const firstElem = myString[i];
-  const secondElem = myString[length - i - 1];
+  let firstElem = [];
+  let secondElem = [];
   for (i = 0; i < length - 1; i++) {
+    firstElem = myString[i];
+    secondElem = myString[length - i - 1];
     if (firstElem != secondElem) return false;
   }
   return true;
@@ -46,9 +48,11 @@ function buildPalindrome(str) {
 //NOTE: Find the first non-consecutive number
 //sample output: [1,2,3,5] -> 5
 function firstNonConsecutive(arr) {
+  let curr = 0;
+  let next = 0;
   for (let i = 0; i < arr.length - 1; i++) {
-    const curr = arr[i];
-    const next = arr[i + 1];
+    curr = arr[i];
+    next = arr[i + 1];
     if (curr + 1 !== next) {
       return next;
     }
