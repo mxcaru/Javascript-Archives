@@ -93,9 +93,9 @@ function stray(numbers) {
 }
 
 //loop version of reduce
-let sum = 0;
-for (let i = 0; i < numbers.length; i++) {
-  sum ^= numbers[i];
+let accumulator = 0;
+for (let currentValue = 0; currentValue < numbers.length; currentValue++) {
+  accumulator ^= numbers[currentValue];
 }
 
 //how to use reduce method
