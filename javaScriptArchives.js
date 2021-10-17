@@ -92,9 +92,6 @@ function stray(numbers) {
   //   return numbers.reduce(reducer);
 }
 
-//reduce works like this
-const numbers = [3, 17, 17, 17, 17];
-
 //loop version of reduce
 let sum = 0;
 for (let i = 0; i < numbers.length; i++) {
@@ -102,6 +99,6 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 //how to use reduce method
-const stray = numbers.reduce((accumulator, currentValue) => {
-  return accumulator ^ currentValue;
-});
+//arrow function version
+const stray = (numbers) =>
+  numbers.reduce((accumulator, currentValue) => accumulator ^ currentValue);
