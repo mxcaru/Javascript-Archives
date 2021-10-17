@@ -74,3 +74,34 @@ function reverseString(str) {
 function maps(arr) {
   return (finalArr = arr.map((elem) => elem * 2));
 }
+
+//NOTE: Will you make it?
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return distanceToPump <= mpg * fuelLeft;
+};
+
+//NOTE: Find the stray number
+//sample output: [17,17,17,3] -> 3
+function stray(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum ^= numbers[i];
+  }
+  return sum;
+  //   let reducer = (first, second) => first ^ second;
+  //   return numbers.reduce(reducer);
+}
+
+//reduce works like this
+const numbers = [3, 17, 17, 17, 17];
+
+//loop version of reduce
+let sum = 0;
+for (let i = 0; i < numbers.length; i++) {
+  sum ^= numbers[i];
+}
+
+//how to use reduce method
+const stray = numbers.reduce((accumulator, currentValue) => {
+  return accumulator ^ currentValue;
+});
