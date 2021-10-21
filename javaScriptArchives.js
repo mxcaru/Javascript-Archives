@@ -127,3 +127,21 @@ function oneDimensionalConverter(array) {
   }
   return oneDimensionalArr;
 }
+
+//NOTE: Binary Search Algorithm
+//sample out: ([1,2,3,4,5],4) -> value found at index 3
+function binarySearch(sortedArray, value) {
+  let left = 0;
+  let right = sortedArray.length - 1;
+  let mid = 0;
+  while (left <= right) {
+    mid = Math.round((left + right) / 2);
+    console.log(mid);
+    if (sortedArray[mid] === value) {
+      return `value found at index ${mid}`;
+    } else if (sortedArray[mid] < value) {
+      left = mid + 1;
+    } else right = mid - 1;
+  }
+  return `no value found`;
+}
