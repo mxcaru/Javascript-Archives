@@ -102,3 +102,28 @@ for (let currentValue = 0; currentValue < numbers.length; currentValue++) {
 //arrow function version
 const stray = (numbers) =>
   numbers.reduce((accumulator, currentValue) => accumulator ^ currentValue);
+
+//NOTE: Bubble Sort Algorithm, sort array to ascending order
+//sample output: [10,4,3,2,1] -> [1,2,3,4,10]
+function bubbleSort(array) {
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let j = 0; j < array.length - 1 - i; j++) {
+      if (array[j] > array[j + 1]) {
+        [array[j], array[j + 1]] = [array[j + 1], array[j]];
+      }
+    }
+  }
+  return array;
+}
+
+//NOTE: Convert 2d array to 1d
+//sample output: [[1,2,3],[4,5,6]] -> [1,2,3,4,5,6]
+function oneDimensionalConverter(array) {
+  let oneDimensionalArr = [];
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) {
+      oneDimensionalArr.push(array[i][j]);
+    }
+  }
+  return oneDimensionalArr;
+}
