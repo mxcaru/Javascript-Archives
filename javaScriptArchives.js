@@ -70,9 +70,9 @@ function reverseString(str) {
   return final;
 }
 
-//NOTE: Reverse a string using map method
+//NOTE: Using map method
 function maps(arr) {
-  return (finalArr = arr.map((elem) => elem * 2));
+  return (finalArr = arr.map((elem) => elem + 1));
 }
 
 //NOTE: Will you make it?
