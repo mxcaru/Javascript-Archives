@@ -169,3 +169,16 @@ function getMissingElement(superImportantArray) {
 //reduce method
 const getMissingElement = (superImportantArray) =>
   superImportantArray.reduce((sum, elem) => sum - elem, 45);
+
+//NOTE: Vowel Count
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+// The input string will only consist of lower case letters and/or spaces.
+
+//sample output: 'abracadabra' -> 5
+function getCount(str) {
+  let regex = /[aeiou]/g;
+  return str.match(regex) == null ? 0 : str.match(regex).length;
+}
