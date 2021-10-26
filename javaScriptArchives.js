@@ -182,3 +182,28 @@ function getCount(str) {
   let regex = /[aeiou]/g;
   return str.match(regex) == null ? 0 : str.match(regex).length;
 }
+
+//NOTE: last digits of a number
+//sample output: 12345,2 -> 45
+function lastDigit(n, d) {
+  const numArr = Array.from(String(n), Number);
+  if (d > numArr.length) {
+    return numArr;
+  } else if (d <= 0) {
+    return [];
+  } else return numArr.slice(-d);
+}
+
+//NOTE: Shortest Word
+//sample output: "Let's travel abroad shall we" -> 2
+function findShort(s) {
+  let sArr = s.split(" ");
+  for (let i = 0; i < sArr.length - 1; i++) {
+    for (j = 0; j < sArr.length - i - 1; j++) {
+      if (sArr[j].length > sArr[j + 1].length) {
+        [sArr[j], sArr[j + 1]] = [sArr[j + 1], sArr[j]];
+      }
+    }
+  }
+  return sArr[0].length;
+}
