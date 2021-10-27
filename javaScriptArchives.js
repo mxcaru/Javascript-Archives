@@ -207,3 +207,21 @@ function findShort(s) {
   }
   return sArr[0].length;
 }
+
+//NOTE: Highest and Lowest
+//sample output: highAndLow("1 2 3 4 5"); --> return "5 1"
+//Bubble sort and min/max method solutions
+
+function highAndLow(numbers) {
+  //let numArr = numbers.split(" ").map(function (num) {return parseInt(num);});
+  let numArr = numbers.split(" ");
+  //     for (let i = 0; i < numArr.length - 1; i++) {
+  //         for(let j = 0; j < numArr.length - 1 - i; j++){
+  //             if(numArr[j] > numArr[j + 1]){
+  //                 [numArr[j],numArr[j + 1]] = [numArr[j + 1], numArr[j]]
+  //             }
+  //         }
+  //     }
+  return `${Math.max.apply(0, numArr)} ${Math.min.apply(0, numArr)}`;
+  //return `${numArr[numArr.length - 1]} ${numArr[0]}`;
+}
