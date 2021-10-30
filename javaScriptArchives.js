@@ -136,7 +136,6 @@ function binarySearch(sortedArray, value) {
   let mid = 0;
   while (left <= right) {
     mid = Math.round((left + right) / 2);
-    console.log(mid);
     if (sortedArray[mid] === value) {
       return `value found at index ${mid}`;
     } else if (sortedArray[mid] < value) {
