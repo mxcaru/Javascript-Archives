@@ -225,3 +225,17 @@ function highAndLow(numbers) {
   return `${Math.max.apply(0, numArr)} ${Math.min.apply(0, numArr)}`;
   //return `${numArr[numArr.length - 1]} ${numArr[0]}`;
 }
+
+//NOTE: Two Sum
+//sample output: Input: nums = [2,7,11,15], target = 9
+// Output: [0,1]
+// Output: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+function twoSum2(nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[j] === target - nums[i]) return [i, j]; //i = 2, 9 - 2 = 7, 7 + 2 = 9
+    }
+  }
+  return null;
+}
