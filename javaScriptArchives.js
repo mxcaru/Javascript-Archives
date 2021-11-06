@@ -238,3 +238,17 @@ function twoSum2(nums, target) {
   }
   return null;
 }
+
+//NOTE:Pascal Case
+//Complete the method/function so that it converts dash/underscore delimited words into camel casing.The first word wuthin output should be capitalized only if the original word was capitalized (knows as Upper Case, also often referred to as Pascal Case)
+//sample output: 'the-stealth-warrior -> 'theStealthWarrior'
+
+function pascalCase(str) {
+  const word = str.split(/[-_]/i);
+  const finalWord = [];
+
+  for (const letter of word) {
+    finalWord.push(letter[0].toUpperCase() + letter.slice(1));
+  }
+  return finalWord.join("");
+}
