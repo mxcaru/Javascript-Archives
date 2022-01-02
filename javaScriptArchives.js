@@ -252,3 +252,9 @@ function pascalCase(str) {
   }
   return finalWord.join("");
 }
+
+//NOTE: Array to string
+
+function smash(words) {
+  return words.join(" ");
+}
