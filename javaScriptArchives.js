@@ -258,3 +258,32 @@ function pascalCase(str) {
 function smash(words) {
   return words.join(" ");
 }
+
+function smallEnough(arr, limit) {
+  for (let i = 0; i < arr.length; i++) {
+    if (limit < arr[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function extraPerfect(n) {
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 !== 0) {
+      arr.push(i);
+    }
+  }
+  return arr;
+}
+
+function tidyNumber(n) {
+  const arr = Array.from(String(n), Number);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > arr[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
